@@ -397,7 +397,7 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{1mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
@@ -430,8 +430,8 @@
     \ifthenelse{\isundefined{\@photo}}{}{%
       \newlength{\photodim}
       \ifthenelse{\equal{\@photoshape}{circle}}%
-        {\setlength{\photodim}{1.3cm}}%
-        {\setlength{\photodim}{1.8cm}}%
+        {\setlength{\photodim}{1.0cm}}%
+        {\setlength{\photodim}{1.5cm}}%
       \ifthenelse{\equal{\@photoedge}{edge}}%
         {\def\@photoborder{darkgray}}%
         {\def\@photoborder{none}}%
@@ -595,6 +595,7 @@
 % Define an environment for cventry
 \newenvironment{cventries}{%
   \vspace{\acvSectionContentTopSkip}
+  \vspace{\acvSectionContentTopSkip}
   \begin{center}
 }{%
   \end{center}
@@ -602,7 +603,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-5.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
